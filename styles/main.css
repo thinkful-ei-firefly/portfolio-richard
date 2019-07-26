@@ -122,9 +122,9 @@ nav {
     min-width: 202px;
 }
 
-section{
+/* section{
     border: 1px solid black;
-}
+} */
 
 main {
     display: flex;

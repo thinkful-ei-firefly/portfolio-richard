@@ -1,8 +1,9 @@
 'use strict';
-/* global $ */
+/*global portfolio $*/
 
 const main = function() {
-
+  portfolio.eventBinder();
+  portfolio.render();
 };
 
 $(main);
