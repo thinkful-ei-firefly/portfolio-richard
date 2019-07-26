@@ -98,8 +98,12 @@ img {
 }
 
 footer {
-    text-align: left;
-    padding: 10px 100px;
+    text-align: center;
+    padding: 40px 100px;
+}
+
+i {
+    color: #e26200;
 }
 
 
