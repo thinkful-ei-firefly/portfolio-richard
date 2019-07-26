@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    background-color: #EFFEFF; 
+    /* #d8fbff; */
+  }
+
+
+
+h1 {
+    font-family: 'Eagle Lake', 
+    cursive;
+    color: #e26200;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 4px 4px;
+    margin: 15px;
+    min-width: 230px;
+}
+
+nav {
+    text-align: right;
+}
+
+button {
+    font-family: 'Eagle Lake', 
+    cursive;
+    color: #e26200;
+    font-size: 18px;
+    border: 1px solid #EFFEFF;
+    padding: 4px 4px;
+    background: #EFFEFF;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out,
+                transform 150ms ease;
+}
+
+button:hover,
+button:focus {
+    color: #1800ff;
+}
+
+button:focus {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header:after {
+    content: " ";
+    display: block;
+    border-bottom: 3.5px solid black;
+}
+
+main {
+    font-family: "PT Sans",
+    sans-serif; 
+    font-size: 20px;
+    color: #444;
+    line-height: 1.5;
+    padding-top: 40px;
+  }
+
+.center {
+    padding: 10px;
+    text-align: left;
+}
+
+.my-bookmarks, .presidents-quiz {
+    text-align: center;
+}
+
+.technologies, .project-links{
+    text-align: center;
+}
+
+a {
+    padding: 10px;
+}
+
+h2, p {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.media {
+    min-width: 0;
+    margin: 5px
+}
+
+img {
+    width: 450px;
+    max-width: 100%;
+    max-height: 450px;
+}
+
+#jqueryImg {
+    max-width: 65px;
+}
+
+footer {
+    text-align: left;
+    padding: 10px 100px;
+}
+
+
+
+/* --- flexbox stuff --- */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h1 {
+    flex-basis: 40%;
+}
+
+nav {
+    flex-basis: 40%;
+    min-width: 202px;
+}
+
+section{
+    border: 1px solid black;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.left, .right {
+    flex: .5;
+}
+
+.center {
+    flex: 3;
+}
+
+/* .my-bookmarks, .presidents-quiz {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+} */
+
+
+
+
+/* Larger screen widths */
+
+@media (min-width: 750px) {
+    h1 {
+        font-size: 36px;
+        margin: 30px;
+        min-width: 340px;
+    }
+    
+    nav {
+        min-width: 280px;
+    }
+
+    button {
+        font-size: 24px;
+        margin: 30px 5px 30px;
+    }
+
+    .center {
+        max-width: 500px;
+    }
+}
+
+
+/* Full Screen widths */
+
+@media (min-width: 900px) {
+
+    header {
+        max-width: 875px;
+    }
+
+    body {
+        text-align: center;
+    }
+}
+
