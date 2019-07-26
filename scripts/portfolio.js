@@ -3,17 +3,17 @@
 
 const portfolio = (function() {
 
-    //render
+  //render
 
-    //eventBinder
+  //eventBinder
 
-    //handle click about me
+  //handle click about me
 
-    //handle click projects
+  //handle click projects
 
-    //return about me html
+  //return about me html
 
-    //return projects html
+  //return projects html
 
-    return {};
+  return {};
 })();
