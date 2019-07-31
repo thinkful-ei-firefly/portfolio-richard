@@ -46,8 +46,9 @@ const portfolio = (function() {
     return `
       <section class="about-me">
       <p>Hi, I'm Richard a full-stack developer and an inventive problem solver.</p>
-      <p>I am a web developer currently in the Engineering Immersion full-stack Bootcamp at Thinkful. I find implementing the things I learn to create new applications very fullfilling. excitement to learn more.... </p>
-      <p>In my downtime, I like hanging out with family and close friends, fishing, and experiencing the great outdoors.  Having a healthy work-life balance is important to me.</p>
+      <p>I am a web developer currently in the Engineering Immersion full-stack Bootcamp at Thinkful. 
+      I find implementing the things I learn to create new applications very fulfilling. excitement to learn more...</p>
+      <p>In my downtime, I like hanging out with family and close friends, fishing, and experiencing the great outdoors. Having a healthy work-life balance is important to me.</p>
       </section>`;
   };
 
@@ -59,7 +60,7 @@ const portfolio = (function() {
         <div class="media">
             <img src="images/myBookmark0.png" alt="My Bookmarks App">
         </div>
-        <p id="alignLeft">My Bookmarks was created for people who like collecting bookmarks of their favorite websites. Users can create, collecte and delete their favorite bookmarks.</p>
+        <p id="alignLeft">My Bookmarks was created for people who like collecting bookmarks of their favorite websites. Users can create, collect and delete their favorite bookmarks.</p>
         <p class="project-links">
             <a href="https://thinkful-ei-firefly.github.io/richard-bookmarks-app/" target="_blank">Live</a>
             <a href="https://github.com/thinkful-ei-firefly/richard-bookmarks-app" target="_blank">Repo</a>
@@ -74,7 +75,7 @@ const portfolio = (function() {
       <section class="presidents-quiz">
         <h2>Presidents Quiz</h2>
         <img id="presQuizPic" src="images/presidentQuiz0.png" alt="Presidents Quiz">
-        <p>Examine your familiarity with US presidents! The presidents quiz was created for those who would like to test their trivia knowledge of US presidnets. I built this app to help users learn more abstract knowledge of presidents of the United States.</p>
+        <p>Examine your familiarity with US presidents! The president's quiz was created for those who would like to test their trivia knowledge of US presidents. I built this app to help users learn more abstract knowledge of presidents of the United States.</p>
         <p class="project-links">
             <a href="https://thinkful-ei-firefly.github.io/chris_richard_quiz/" target="_blank">Live</a>
             <a href="https://github.com/thinkful-ei-firefly/chris_richard_quiz" target="_blank">repo</a>
