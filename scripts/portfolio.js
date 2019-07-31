@@ -57,9 +57,7 @@ const portfolio = (function() {
     return `
       <section class="my-bookmarks">
         <h2 id="alignLeft">My Bookmarks</h2>
-        <div class="media">
-            <img src="images/myBookmark0.png" alt="My Bookmarks App">
-        </div>
+        <img src="images/bookmarks.png" alt="My Bookmarks App">
         <p id="alignLeft">My Bookmarks was created for people who like collecting bookmarks of their favorite websites. Users can create, collect and delete their favorite bookmarks.</p>
         <p class="project-links">
             <a href="https://thinkful-ei-firefly.github.io/richard-bookmarks-app/" target="_blank">Live</a>
@@ -74,7 +72,7 @@ const portfolio = (function() {
       </section>
       <section class="presidents-quiz">
         <h2>Presidents Quiz</h2>
-        <img id="presQuizPic" src="images/presidentQuiz0.png" alt="Presidents Quiz">
+        <img id="presQuizPic" src="images/presidentsQuiz.png" alt="Presidents Quiz">
         <p>Examine your familiarity with US presidents! The president's quiz was created for those who would like to test their trivia knowledge of US presidents. I built this app to help users learn more abstract knowledge of presidents of the United States.</p>
         <p class="project-links">
             <a href="https://thinkful-ei-firefly.github.io/chris_richard_quiz/" target="_blank">Live</a>
