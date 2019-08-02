@@ -70,13 +70,13 @@ const portfolio = (function() {
             <img id="jqueryImg" src="images/jquery-1.svg" alt="jQuery">
         </p>
       </section>
-      <section class="presidents-quiz">
+      <section class="president's-quiz">
         <h2>Presidents Quiz</h2>
         <img id="presQuizPic" src="images/presidentsQuiz.png" alt="Presidents Quiz">
         <p>Examine your familiarity with US presidents! The president's quiz was created for those who would like to test their trivia knowledge of US presidents. I built this app to help users learn more abstract knowledge of presidents of the United States.</p>
         <p class="project-links">
             <a href="https://thinkful-ei-firefly.github.io/chris_richard_quiz/" target="_blank">Live</a>
-            <a href="https://github.com/thinkful-ei-firefly/chris_richard_quiz" target="_blank">repo</a>
+            <a href="https://github.com/thinkful-ei-firefly/chris_richard_quiz" target="_blank">Rcd epo</a>
         </p>
         <p class="technologies">
                 <i class="fab fa-html5"></i>
