@@ -7,22 +7,26 @@ const portfolio = (function() {
   //render
   const render = function() {
     //render about me if projects is false
-    let navHtml = '';
-    let mainHtml = '';
+    // let navHtml = '';
     if (store.page === 'about') {
-      navHtml = getNavHtmlAbout();
-      mainHtml = getHtmlAboutMe();
+      // navHtml = getNavHtmlAbout();
+      const mainHtml = getHtmlAboutMe();
+      $('.content').html(mainHtml);
+      $('.projects').html('');
     }
     else if (store.page === 'projects') {
-      navHtml = getNavHtmlProjects();
-      mainHtml = getHtmlProjects();
+      // navHtml = getNavHtmlProjects();
+      const mainHtml = getHtmlProjects();
+      $('.content').html('');
+      $('.projects').html(mainHtml);
     }
     else {
-      navHtml = getNavHtmlHome();
-      mainHtml = getHtmlHome(); 
+      // navHtml = getNavHtmlHome();
+      const mainHtml = getHtmlHome();
+      $('.content').html(mainHtml);
+      $('.projects').html('');
     }
-    $('.navigation').html(navHtml);
-    $('.center').html(mainHtml);
+    // $('.navigation').html(navHtml);
   };
 
   //eventBinder
@@ -36,8 +40,7 @@ const portfolio = (function() {
   //handle click home
   const handleClickHome = function() {
     $('header').on('click', '.js-home', e => {
-      console.log(window.matchMedia('(max-width: 680px)').matches);
-      // console.log($('#nav').attr());
+      // console.log(window.matchMedia('(max-width: 680px)').matches);
       e.preventDefault();
       store.page='home';
       if (window.matchMedia('(max-width: 680px)').matches) {
@@ -144,7 +147,7 @@ const portfolio = (function() {
             <img id="jqueryImg" src="${store.images.jquery}">
         </p>
       </section>
-      <section class="president's-quiz">
+      <section class="presidents-quiz">
         <h2>Presidents Quiz</h2>
         <img id="presQuizPic" src="${store.images.quiz}" alt="Presidents Quiz">
         <p>Examine your familiarity with US presidents! The Presidents Quiz was created for those who would like to test their trivia knowledge of US Presidents. I built this app to help users learn more abstract knowledge of Presidents of the United States.</p>
