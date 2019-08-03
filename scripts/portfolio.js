@@ -36,11 +36,11 @@ const portfolio = (function() {
   //handle click home
   const handleClickHome = function() {
     $('header').on('click', '.js-home', e => {
-      console.log(window.matchMedia('(max-width: 600px)'));
+      console.log(window.matchMedia('(max-width: 680px)').matches);
       // console.log($('#nav').attr());
       e.preventDefault();
       store.page='home';
-      if (window.matchMedia('(max-width: 600px)').matches) {
+      if (window.matchMedia('(max-width: 680px)').matches) {
         $('#nav').toggleClass('nav nav responsive');
       }
       render();
@@ -52,7 +52,7 @@ const portfolio = (function() {
     $('header').on('click', '.js-projects', e => {
       e.preventDefault();
       store.page='projects';
-      if (window.matchMedia('(max-width: 600px)').matches) {
+      if (window.matchMedia('(max-width: 680px)').matches) {
         $('#nav').toggleClass('nav nav responsive');
       }
       render();
@@ -64,7 +64,7 @@ const portfolio = (function() {
     $('header').on('click', '.js-about-me', e => {
       e.preventDefault();
       store.page='about';
-      if (window.matchMedia('(max-width: 600px)').matches) {
+      if (window.matchMedia('(max-width: 680px)').matches) {
         $('#nav').toggleClass('nav nav responsive');
       }
       render();
