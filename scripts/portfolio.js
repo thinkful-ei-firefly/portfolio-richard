@@ -6,30 +6,27 @@ const portfolio = (function() {
 
   //render
   const render = function() {
-    //render about me if projects is false
-    // let navHtml = '';
+    //render about me if store.page is equal to about
     if (store.page === 'about') {
-      // navHtml = getNavHtmlAbout();
       const mainHtml = getHtmlAboutMe();
       $('.content').html(mainHtml);
       $('.projects').html('');
     }
+    //render projects if store.page is equal to projects
     else if (store.page === 'projects') {
-      // navHtml = getNavHtmlProjects();
       const mainHtml = getHtmlProjects();
       $('.content').html('');
       $('.projects').html(mainHtml);
     }
+    //render home if store.page is equal to home
     else {
-      // navHtml = getNavHtmlHome();
       const mainHtml = getHtmlHome();
       $('.content').html(mainHtml);
       $('.projects').html('');
     }
-    // $('.navigation').html(navHtml);
   };
 
-  //eventBinder
+  //eventBinder contains all handle click functions
   const eventBinder = function() {
     handleClickHome();
     handleClickProjects();
@@ -37,10 +34,13 @@ const portfolio = (function() {
     handleClickHamburger();
   };
 
-  //handle click home
+  /*when home is clicked: 
+  -changes store.page to home 
+  -if the page width is 680 px or less, it toggles nav class from 'nav responsive' to 'nav'
+  doing so colapses the nav menu back to a hamburger
+  */
   const handleClickHome = function() {
     $('header').on('click', '.js-home', e => {
-      // console.log(window.matchMedia('(max-width: 680px)').matches);
       e.preventDefault();
       store.page='home';
       if (window.matchMedia('(max-width: 680px)').matches) {
@@ -50,7 +50,11 @@ const portfolio = (function() {
     });
   };
 
-  //handle click projects
+  /*when projects is clicked:
+  -changes store.page to projects
+  -if the page width is 680 px or less, it toggles nav class from 'nav responsive' to 'nav'
+  doing so colapses the nav menu back to a hamburger
+  */
   const handleClickProjects = function() {
     $('header').on('click', '.js-projects', e => {
       e.preventDefault();
@@ -62,7 +66,11 @@ const portfolio = (function() {
     });
   };
 
-  //handle click about me
+  /*when about me is clicked:
+  -changes store.page to about me
+  -if the page width is 680 px or less, it toggles nav class from 'nav responsive' to 'nav'
+  doing so colapses the nav menu back to a hamburger
+  */
   const handleClickAboutMe = function() {
     $('header').on('click', '.js-about-me', e => {
       e.preventDefault();
@@ -74,47 +82,28 @@ const portfolio = (function() {
     });
   };
 
-  //handle click on hamburger menu, opens up navigation
+  /*When sreen width is small (<600px)
+  clicking on hamburger menu will open up the navication
+  this is handled by add the class = responsive to nav
+  */
   const handleClickHamburger = function() {
     $('nav').on('click', '.icon', e => {
       e.preventDefault();
       $('#nav').toggleClass('nav nav responsive');
     });
   };
-
-  //returns navigation html for home page
-  const getNavHtmlHome = function() {
-    return `
-      <button type="submit" class="button, js-projects">projects</button>
-      <button type="submit" class="button, js-about-me">about me</button>`;
-  };
-
-  //returns navigation html for home page
-  const getNavHtmlProjects = function() {
-    return `
-      <button type="submit" class="button, js-home">home</button>
-      <button type="submit" class="button, js-about-me">about me</button>`;
-  };
-
-  //returns navigation html for home page
-  const getNavHtmlAbout = function() {
-    return `
-      <button type="submit" class="button, js-home">home</button>
-      <button type="submit" class="button, js-projects">projects</button>
-      `;
-  };
   
   //returns home html
   const getHtmlHome = function() {
     return `
     <section class="about-me">
-      <p>Welcome, I am a full-stack developer and Ph.D. Chemist.</p>
-      <p>I believe I missed the mark on finding my calling in life by a small degree.</p>
-      <p>See, I have always been an engineer!!!</p>
-      <p>As a child, I loved science and mathematics. What I did not discover was how much of a hands-on learner I was. I suppose it should have occurred to me, I was always repairing video game remotes, by taking them apart and sodering the cables back on the breadboard. Or, as a college student getting my best grades as in my lab class. Organic Chemistry lab was the best, whereas, Organic Chemistry class was the worst. Please don't tell anyone I said that. (I am a Physical Chemist.)</p>
-      <p>I discovered programming as a hobby when I took a class at Portland Community College. I thought it was going to be about sodering and electronic components, and the first day we did build a blinking LED toy. The magic happened the next time our class met when we learned how to program the circuit in that little toy using an Arduino. Soon after, I discovered and bought a Raspberry Pi. I heard people were programming python on them, and I had also learned years earlier that some scientists used python to analyze data and do computational chemistry. The software engineering bug had bitten and I was hooked on the idea of learning python.</p>
-      <p>Years later, working as a Material Scientist for M-Disc, I had done work for them as a graduate student. Because the entire optical disc market was tanking (burning CDs or DVDs was so 1990's),  we were sending customers data burnt on our archival media. One of my many responsibilities was to take care of the robots burning our discs, and I had a theory. The disc printers needed less attention if they were used more regularly, and wrote a simple batch file that did just that. That batch file, turned into many batch files, then into a simple python GUI. I added the ability to send QA/QC burn and print jobs. It also had a function that would take an external hard drive, parse the data into 5, 25, 50 or 100 Gb increments and burn and print the data to disc.</p>
-      <p>It was through these experiences, I discovered I not only had a love of learning but a love of applied learning. Building cool stuff, as a software engineer, fulfills my passion for both learning and application.</p>
+      <p>${store.textContent.home.p1}</p>
+      <p>${store.textContent.home.p2}</p>
+      <p>${store.textContent.home.p3}</p>
+      <p>${store.textContent.home.p4}</p>
+      <p>${store.textContent.home.p5}</p>
+      <p>${store.textContent.home.p6}</p>
+      <p>${store.textContent.home.p7}</p>
       </section>`;
   };
 
@@ -122,10 +111,9 @@ const portfolio = (function() {
   const getHtmlAboutMe = function() {
     return `
       <section class="about-me">
-      <p>Hi, I'm Richard a full-stack developer and an inventive problem solver.</p>
-      <p>I am a web developer currently in the Engineering Immersion full-stack Bootcamp at Thinkful. 
-      I find implementing new ideas and creating applications from scratch very fulfilling. I am a life-long learner and am excited to learn more...</p>
-      <p>In my downtime, I like hanging out with family and close friends, fishing, and experiencing the great outdoors. Having a healthy work-life balance is important to me.</p>
+      <p>${store.textContent.aboutMe.p1}</p>
+      <p>${store.textContent.aboutMe.p2}</p>
+      <p>${store.textContent.aboutMe.p3}</p>
       </section>`;
   };
 
@@ -133,9 +121,9 @@ const portfolio = (function() {
   const getHtmlProjects = function() {
     return `
       <section class="my-bookmarks">
-        <h2 id="alignLeft">My Bookmarks</h2>
-        <img src="${store.images.bookmark}" alt="My Bookmarks App">
-        <p id="alignLeft">My Bookmarks was created for people who like collecting bookmarks of their favorite websites. Users can create, collect and delete their favorite bookmarks.</p>
+        <h2 id="alignLeft">${store.textContent.projects.myBookmarks.title}</h2>
+        <img ${store.images.bookmark} >
+        <p id="alignLeft">${store.textContent.projects.myBookmarks.desc}</p>
         <p class="project-links">
             <a href="${store.links.bookmark.live}" target="_blank">Live</a>
             <a href="${store.links.bookmark.repo}" target="_blank">Repo</a>
@@ -144,13 +132,13 @@ const portfolio = (function() {
             <i class="fab fa-html5"></i>
             <i class="fab fa-css3"></i>
             <i class="fab fa-js"></i>
-            <img id="jqueryImg" src="${store.images.jquery}">
+            <img ${store.images.jquery} >
         </p>
       </section>
       <section class="presidents-quiz">
-        <h2>Presidents Quiz</h2>
-        <img id="presQuizPic" src="${store.images.quiz}" alt="Presidents Quiz">
-        <p>Examine your familiarity with US presidents! The Presidents Quiz was created for those who would like to test their trivia knowledge of US Presidents. I built this app to help users learn more abstract knowledge of Presidents of the United States.</p>
+        <h2>${store.textContent.projects.presidentsQuiz.title}</h2>
+        <img ${store.images.quiz} >
+        <p>${store.textContent.projects.presidentsQuiz.desc}</p>
         <p class="project-links">
             <a href="${store.links.quiz.live}" target="_blank">Live</a>
             <a href="${store.links.quiz.repo}" target="_blank">Repo</a>
@@ -159,7 +147,7 @@ const portfolio = (function() {
                 <i class="fab fa-html5"></i>
                 <i class="fab fa-css3"></i>
                 <i class="fab fa-js"></i>
-                <img id="jqueryImg" src="images/jquery-1.svg" alt="jQuery">
+                <img ${store.images.jquery} >
             </p>
       </section>`;
   };
